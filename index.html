@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Enjoy Japanese</title>
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		
+		<header id="page_header">
+			<!-- <img src="icon.png"> -->
+			<h1>Enjoy Japanese<h1>
+		</header>
+		
+		<section id="page_content">
+			<section id="page_menu" onmousedown="return false" onselectstart="return false">
+				<article id="radio_panel">
+					<nav class="button_field">
+						<input type="checkbox" class="checkbox" id="checkbox_katakana"></input>
+						<label for="checkbox_katakana">Katakana</label>
+					</nav>
+					<nav class="button_field">
+						<input type="checkbox" class="checkbox" id="checkbox_katakana_dakuten"></input>
+						<label for="checkbox_katakana_dakuten">Katakana with Dakuten</label>
+					</nav>
+					<nav class="button_field">
+						<input type="checkbox" class="checkbox" id="checkbox_hirogana"></input>
+						<label for="checkbox_hirogana">Hiragana</label>
+					</nav>
+					<nav class="button_field">
+						<input type="checkbox" class="checkbox" id="checkbox_hirogana_dakuten"></input>
+						<label for="checkbox_hirogana_dakuten">Hiragana with Dakuten</label>
+					</nav>
+				</article>
+			</section>
+			<section id="page_symbol">
+				<article id="content">
+					<p class="char" id="symbol"></p>
+					<input type="text" maxlength="3" class="test" id="enter" value="">
+				</article>
+				<!--
+				<article id="img_content">
+					<img src="icon.png" height="100%">
+				</article>
+				-->
+			</section>
+		</section>
+		
+		<!-- <footer id="page_footer"></footer> -->
+		
+		<script src="script.js" type="text/javascript"></script>
+		<script src="jquery-1.4.3.js" type="text/javascript"></script>
+	</body>
+</html>
