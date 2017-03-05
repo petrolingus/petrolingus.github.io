@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap Template</title>
+        
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+       
+        
+        <div class="navbar navbar-inverse navbar-static-top navbar-setting">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                        <span class="sr-only">Открыть навигацию</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <!-- <i class="glyphicon glyphicon-menu-hamburger"></i> -->
+                    </button>
+                    <a href="#" class="navbar-brand">Логотип</a>
+                </div>
+                <div class="collapse navbar-collapse" id="responsive-menu">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Пункт 1</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Пункт 2<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Пункт 2.1</a></li>
+                                <li><a href="#">Пункт 2.2</a></li>
+                                <li><a href="#">Пункт 2.3</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Пункт 2.4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Пункт 3</a></li>
+                        <li><a href="#">Пункт 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="carousel" class="carousel slide hidden-xs">
+           <!-- Индикаторы слайдера -->
+            <ol class="carousel-indicators">
+                <li class="active" data-target="#carousel" data-slide-to="0"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+            </ol>
+            	
+            
+            <!-- Слайды -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="img/1.jpg" alt="" class="img-slider" height="200px">
+                    <div class="carousel-caption">
+                        <h3>First slide</h3>
+                        <p>Slide description</p>
+                    </div>
+                </div>
+                <div class="item height-full">
+                    <img src="img/12.jpg" alt="" class="img-slider" height="40%">
+                    <div class="carousel-caption">
+                        <h3>Second slide</h3>
+                        <p>Slide description</p>
+                    </div>
+                </div>
+                <div class="item height-full">
+                    <img src="img/8.jpg" alt="" class="img-slider">
+                    <div class="carousel-caption">
+                        <h3>Third slide</h3>
+                        <p>Slide description</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Стрелки слайдера -->
+            <a href="#carousel" class="left carousel-control" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a href="#carousel" class="right carousel-control" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <h1>Название сайта</h1>
+                <!-- <p><i class="glyphicon glyphicon-heart"></i></p> -->
+                <p>
+                    <a href="#" class="btn btn-default">Default</a>
+                    <a href="#" class="btn btn-primary">Primary</a>
+                    <a href="#" class="btn btn-success">Success</a>
+                    <a href="#" class="btn btn-warning">Warning</a>
+                    <a href="#" class="btn btn-info">Info</a>
+                    <a href="#" class="btn btn-danger">Danger</a>
+                    <a href="#" class="btn btn-link">Link</a>
+                </p>
+                <p>
+                    <a href="#" class="btn btn-default btn-lg">Default</a>
+                    <a href="#" class="btn btn-default btn-md">Default</a>
+                    <a href="#" class="btn btn-default btn-sm">Default</a>
+                    <a href="#" class="btn btn-default btn-xs">Default</a>
+                </p>
+                <p>
+                    <a href="#" class="btn btn-default btn-block">Default</a>
+                    <a href="#" class="btn btn-default btn-block disabled">Default</a>
+                </p>
+                <p>
+                    <a href="#ss" class="btn btn-success btn-lg btn-block">Send</a>
+                    <button class="btn btn-success btn-lg btn-block" type="submit">Send</button>
+                    <input class="btn btn-success btn-lg btn-block" type="submit" value="Send">
+                </p>
+            </div>
+        </div>
+        
+        <div class="container-fluid color-gray">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni libero facilis tempora nesciunt sint quidem amet suscipit provident voluptas, esse a dolorem saepe at aperiam cumque repudiandae eos illum deleniti ut dolore quam corporis ratione et. Temporibus hic voluptas impedit delectus vero dolores quaerat dolorum, repellendus odio officiis quisquam dolorem aspernatur earum necessitatibus cum enim repudiandae exercitationem. Sit minus ab doloremque vel, iusto aspernatur illum nostrum esse blanditiis, possimus modi suscipit ipsum maxime veritatis sequi commodi expedita. Quasi aut aliquid quia officiis quam accusantium perspiciatis excepturi totam cupiditate libero, officia eius blanditiis dolor maxime nobis commodi culpa porro placeat quisquam deleniti neque, facere esse sed veritatis? Aliquam magnam ratione et, nihil aliquid sit rerum consequuntur blanditiis modi ullam ut quasi, harum consequatur adipisci ab asperiores tempora dolor sequi veniam praesentium voluptates culpa. Quam quod adipisci delectus voluptates nulla quo debitis eligendi cum molestiae, id, assumenda non quaerat numquam esse veritatis accusantium temporibus perferendis ratione recusandae omnis! Non consequuntur, qui cum. Perferendis commodi, nobis laudantium ex recusandae dicta aspernatur dignissimos suscipit expedita dolores possimus alias repellat obcaecati tempora sequi debitis nostrum animi a! Ex iure magni suscipit commodi modi harum soluta quia voluptates voluptatem optio odio ab deleniti ut saepe in, earum impedit maxime amet odit. Nesciunt numquam dignissimos, nobis dolorum beatae molestiae, aspernatur consequatur ipsa esse illum, atque quisquam voluptatibus sunt quos. Nulla consequatur nobis minima? Necessitatibus possimus praesentium voluptates eius esse omnis culpa, iste suscipit voluptatum nihil ipsam est temporibus eum cum minus totam iusto repellat quasi exercitationem sit ea sunt repudiandae. Natus eveniet nesciunt quaerat atque illo perferendis, quas officia hic minus voluptate consectetur consequuntur porro totam soluta, voluptas, quia sunt voluptatum voluptates! Expedita, repellendus qui hic veritatis, aperiam nostrum itaque ex excepturi corrupti saepe quis accusamus? Illo quibusdam libero repellat obcaecati saepe quam laboriosam sit, reprehenderit tempore, a consectetur sequi odit voluptatum hic eius minima vel officia cupiditate sapiente? Atque vel animi eum asperiores accusamus laborum nostrum itaque ipsum ut voluptatibus laudantium quos quaerat esse assumenda cupiditate voluptatum quisquam vitae non, sint cumque maiores recusandae tenetur sapiente? Praesentium nulla cumque distinctio facere facilis at vero soluta asperiores reprehenderit quaerat explicabo nisi, incidunt sunt. Expedita exercitationem magnam dolorem! Itaque nisi quae, dolor totam, reprehenderit commodi. Possimus quos, sapiente explicabo nemo, nobis ipsa recusandae quae expedita officia nisi, ad velit eveniet cupiditate aspernatur dolorem quas aut qui nulla voluptatem reprehenderit quis facere iure repellendus labore pariatur. Numquam mollitia sequi vitae, eum rem tempora harum perferendis, deserunt fugiat libero officiis praesentium! Et modi facere optio iste cumque eius accusantium corrupti reiciendis id corporis praesentium, autem architecto. Expedita nisi hic ea modi eum, deserunt deleniti obcaecati nemo voluptate voluptatem laborum? Iure nemo quos, sapiente asperiores modi quidem dolorem minus cum harum consequatur, aliquam a, omnis reprehenderit soluta dolor dolorum hic saepe? Saepe magni, sed accusamus sit iste sint et voluptatum, fugit animi error magnam nam debitis excepturi incidunt dignissimos iusto mollitia ea corrupti necessitatibus minima. Nihil itaque, iure quas amet inventore id necessitatibus a porro aut earum, neque? Incidunt, mollitia, labore!</p>
+                </div>
+            </div>
+        </div>
+        
+        <script src="js/jquery-1.12.10.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+html, body {
+    height: 100%;
+}
+
+.navbar-setting {
+    margin: 0;
+}
+
+.height-full {
+   height: 100%;
+}
+
+.color-gray {
+    background-color: darkgray;
+}
