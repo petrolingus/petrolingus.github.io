@@ -1,0 +1,88 @@
+html, body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background: url(img/mainBG.jpg) no-repeat;
+	background-size: auto;
+	background-color: #994444;
+	display: flex;
+    align-items: center;
+}
+
+#score {
+	background-color: rgba(50, 50, 50, 0.5);
+	width: 100%;
+	margin-top: -15%;
+	position: absolute;
+	text-align: center;
+	font-size: 64px;
+	color: #EEE;
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;	
+}
+
+#content {
+	width: 100%;
+	height: 287px;
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#glow {
+	width: 436px;
+	height: 436px;
+	position:absolute;
+	background: url(img/glow.png);
+}
+
+#frame {
+	width: 287px;
+	height: 287px;
+	position:absolute;
+	background: url(img/marina1.png);
+}
+
+#frame:hover {
+	cursor: pointer;
+}
+
+.spin {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 15000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+	
+    -moz-animation-name: spin;
+    -moz-animation-duration: 15000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+	
+    -ms-animation-name: spin;
+    -ms-animation-duration: 15000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(360deg); }
+}
