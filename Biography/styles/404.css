@@ -1,0 +1,34 @@
+body {
+    height: 100%;
+    overflow: hidden;
+    background-color: #cd3c2a;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    background-image: url(../img/404.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left bottom;
+}
+
+section#page_content { width: 100%}
+
+section#page_content p {
+    margin: 0;
+    margin-right: 8%;
+    font-family: Mriamc;
+    text-align: right;
+    color: #fbfbfb;
+}
+
+section#page_content p:first-child { font-size: 8vw}
+section#page_content p:last-child { font-size: 2vw}
+
+a {color: #fbfbfb}
+
+@font-face {
+    font-family: "Mriamc"; 
+    src: url("../fonts/mriamc.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 

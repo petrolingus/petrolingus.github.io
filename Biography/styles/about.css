@@ -1,0 +1,52 @@
+body {
+    overflow-x: hidden;
+    background-color: #eeede9;
+    font-family: DeutschGothic;
+}
+
+section#megumin {
+    background-image: url(../img/bg_2.png);
+    background-position: top right;
+    background-repeat: no-repeat;    
+}
+
+section#megumin p {
+    margin: 0 0 0 8px;
+    width: 50%;
+}
+
+section#haruhi {
+    background-color: #fccdb8;
+    background-image: url(../img/bg_4.png);
+    background-position: bottom left;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+section#haruhi p {
+    text-align: right;
+    margin: 0 0 0 auto;
+    width: 70%;
+}
+
+
+@font-face {
+    font-family: "DeutschGothic"; 
+    src: url("../fonts/DeutschGothic.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "Mriamc"; 
+    src: url("../fonts/mriamc.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "Hansief"; 
+    src: url("../fonts/Hansief.otf") ; 
+    font-style: normal; 
+    font-weight: normal; 
+} 

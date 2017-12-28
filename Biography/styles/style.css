@@ -1,0 +1,85 @@
+body {
+    overflow: hidden;
+    background-image: url(../img/background.png);
+    background-position: left center;
+    background-size: cover;
+}
+
+section#page_content {
+    height: 100%;
+    display: flex;
+    align-items: center; 
+    justify-content: flex-end;
+}
+
+section#page_content section{
+   margin-right: 8%;
+}
+
+section#page_content p {
+    margin: 32px 0 32px 0;
+    text-align: right;
+    color: #fbfbfb;
+}
+section#page_content p:first-child {margin: 0px 0 0px 0}
+
+section#page_content p#job {
+    font-family: "Mriamc";
+    font-size: 28px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+}
+
+section#page_content p#name {
+    font-family: "Hansief";
+    font-size: 128px;
+    letter-spacing: 20px;
+    line-height: 120px;
+}
+@media (max-width: 720px) {
+    section#page_content p#job {font-size: 16px}
+    section#page_content p#name {
+        font-size: 64px;
+        line-height: 64px;
+    }
+}
+
+footer#page_footer {
+    width: 100%;
+    position: absolute;
+	bottom: 0px;
+    display: flex;
+    align-items: center; 
+}
+
+footer#page_footer div {
+    width: 40px;
+    float: left;
+}
+
+#icons_bot {
+    margin-left: auto;
+    margin-right: 0em;
+}
+#icons_bot img {margin: 0 16px 0 16px}
+
+@font-face {
+    font-family: "DeutschGothic"; 
+    src: url("../fonts/DeutschGothic.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "Mriamc"; 
+    src: url("../fonts/mriamc.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "Hansief"; 
+    src: url("../fonts/Hansief.otf") ; 
+    font-style: normal; 
+    font-weight: normal; 
+} 

@@ -1,0 +1,49 @@
+header#page_header {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    white-space: nowrap;
+    border-bottom: 4px solid  #a04040;
+    background-color: #fbfbfb;
+}
+
+header#page_header ul {padding: 0}
+header#page_header ul li {display: inline-block}
+header#page_header ul li:after {
+    content: "|";
+    display: inline-block;
+    vertical-align: top;
+}
+header#page_header ul li:last-child:after {content: none}
+
+header#page_header ul a {
+  text-decoration: none;
+  font-family: "Arial Black", Gadget, sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  margin: 0 32px 0 32px;
+  font-size: 16px;
+  color: #404040;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+header#page_header ul a, header#page_header ul a:visited {color: #404040}
+header#page_header ul a.current, header#page_header ul a:hover{color: #cd3c2a}
+
+header#page_header section {
+    margin: 0 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+header#page_header section a{
+    height: 56px;
+    display: flex;
+    align-items: center;
+    transition: background .2s;
+}
+header#page_header section a:hover{background-color: #cd3c2a}
+
+header#page_header section img {margin: 0 16px 0 16px}
+
