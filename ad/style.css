@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Rochester&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+
+*, *:after, *:before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+}
+
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #373737;
+	background-color: #FFFBF9;
+}
+
+header {
+	width: 100%;
+	padding: 4px 0;
+	background-color: #FF5810;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 960px;
+	padding: 0 16px;
+} 
+
+.logo {
+	font-size: 24pt;
+	color: white;
+	font-family: 'Ribeye Marrow', cursive;
+}
+
+@media (max-width: 480px) {
+	
+	.logo {
+		font-size: 14pt;
+		color: white;
+		font-family: 'Ribeye Marrow', cursive;
+	}
+	
+}
