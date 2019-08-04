@@ -66,6 +66,7 @@ header {
 }
 
 .properties {	
+	font-size: 16px;
 	padding-left:32px;
 }
 
@@ -108,15 +109,20 @@ font-size: 18px;
 @media (max-width: 480px) {
 	
 	.logo {
-		font-size: 28px;
+		font-size: 30px;
 	}
 	
 	.question-title {
-		font-size: 20px;
+		font-size: 22px;
+	}
+	
+	.properties {	
+		font-size: 14px;
+		padding-left:30px;
 	}
 
 	.quastion p {
-		font-size: 12px;
+		font-size: 14px;
 	}
 	
 }
