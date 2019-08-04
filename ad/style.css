@@ -5,37 +5,27 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
 
+
+/* Настройки общих параметров */
 *, *:after, *:before {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
-
 ul {
 	list-style: none;
 }
-
 a {
 	text-decoration: none;
 	outline: none;
 }
-
 body {
 	font-family: 'Open Sans', arial, sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.5;
 	color: #373737;
 	background-color: #FFFBF9;
 }
-
-header {
-	width: 100%;
-	padding: 4px 0;
-	background-color: #FF5810;
-	margin-bottom: 30px;
-	position: relative;
-}
-
 .container {
 	margin: 0 auto;
 	width: 100%;
@@ -43,18 +33,47 @@ header {
 	padding: 0 16px;
 } 
 
+
+/* Настройки шапки страницы */
+header {
+	width: 100%;
+	padding: 4px 0;
+	background-color: #FF5810;
+	margin-bottom: 32px;
+	position: relative;
+}
 .logo {
-	font-size: 24pt;
+	font-size: 32px;
 	color: white;
 	font-family: 'Ribeye Marrow', cursive;
+}
+
+
+/* Настройки основного контента */
+.question-title {
+	font-size: 24px;
+	padding-bottom: 1em;
+}
+
+.quastion p {
+	font-size: 16px;
+	padding-bottom: 1em;
 }
 
 @media (max-width: 480px) {
 	
 	.logo {
-		font-size: 14pt;
-		color: white;
-		font-family: 'Ribeye Marrow', cursive;
+		font-size: 28px;
+	}
+	
+	.question-title {
+		font-size: 20px;
+		padding-bottom: 1em;
+	}
+
+	.quastion p {
+		font-size: 12px;
+		padding-bottom: 1em;
 	}
 	
 }
