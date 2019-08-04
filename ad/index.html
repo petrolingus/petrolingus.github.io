@@ -8,33 +8,81 @@
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 	</head>
 	<body>
+	
 		<header>
 			<nav class="container">
 				<a class="logo" href=""><span>Mathass</span></a>
 			</nav>
 		</header>
+		
 		<section class="container">
 		
 			<section class="quastions-list">
 			
-				<article class="quastion" id="quastion-1">
-				
+				<article class="quastion" id="quastion-1">	
 					<h2 class="question-title">Заглавный заголовок на русском</h2>
-							
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum nibh vel ipsum eleifend gravida. Maecenas id lectus blandit, scelerisque nisl eget, sodales purus. Cras id viverra metus. Nam vitae laoreet lorem, eget hendrerit ipsum. Sed dui magna, aliquet sit amet purus euismod, volutpat convallis nibh. Proin condimentum luctus diam eget interdum. Sed rhoncus mollis leo, et luctus ligula mollis ac. Curabitur sed hendrerit mauris, nec aliquet justo. Proin maximus felis eu elementum vestibulum. Nam non ex vel sapien aliquet tempor lobortis sit amet massa.</p>
-
 					<p>Sed rhoncus vehicula risus vitae convallis. Nullam tristique finibus placerat. Nunc quis magna neque. Aliquam tincidunt libero in velit tincidunt fermentum ac ultricies nulla. Aenean hendrerit accumsan nunc ac euismod. Proin tempor massa est, in pulvinar urna lobortis id. Vestibulum sagittis, ex malesuada fermentum vulputate, turpis ante sodales leo, in tempor est mi molestie magna. Donec commodo dolor non dui vulputate ornare. Mauris elementum faucibus euismod. Proin vulputate cursus mi vel feugiat. Sed ornare non ligula nec tincidunt. Vivamus arcu risus, tincidunt non nisl vel, efficitur lobortis lectus. Donec arcu purus, auctor ut varius non, porta ac massa.</p>
-
 					<p>Curabitur condimentum suscipit consequat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed feugiat ex at arcu efficitur, sollicitudin congue lectus eleifend. Ut ullamcorper velit quis cursus rhoncus. Vestibulum ut nisi imperdiet, sodales lectus eu, aliquet metus. Quisque lacinia varius sapien non volutpat. Vivamus imperdiet dolor dui, at pretium lorem porttitor vel. Pellentesque semper pulvinar congue. Sed libero ipsum, tempus non volutpat ut, semper non eros. Proin eget magna consequat, finibus nibh ut, dictum nisl. Quisque mattis lobortis blandit. Vestibulum tortor sem, mollis eu enim eu, laoreet cursus lacus. Morbi rhoncus convallis mi nec cursus.</p>
-
 					<p>Ut vel lacinia nibh. Vestibulum nec nisl ante. Phasellus facilisis sed quam at rhoncus. Etiam bibendum, lectus eu tempor suscipit, sapien ipsum pellentesque mi, non imperdiet orci arcu nec lacus. Ut ac massa non nisi congue facilisis. Sed ac sapien neque. Fusce blandit mauris diam, at aliquet nisl viverra ut. Sed in urna vel diam maximus consectetur id quis sapien. Maecenas libero nibh, dictum sagittis ex non, ultricies laoreet nulla.</p>
-
 					<p>Donec mattis libero eu porta interdum. Suspendisse bibendum purus massa, vitae efficitur elit rutrum quis. Cras viverra id metus eget commodo. Sed lectus erat, efficitur at elit sed, molestie efficitur mi. Morbi mollis leo tempus vehicula eleifend. Donec venenatis pharetra eros, ornare fringilla enim consequat a. Quisque id ipsum mollis, blandit arcu nec, pulvinar magna. Sed elementum imperdiet risus, in iaculis neque bibendum eu.</p>
+				</article>
+				
+				<article class="quastion" id="quastion-2">
+				
+					<h2 class="question-title">Вопрос 1. Пространство \(\mathbb{R}^{n}\) и его основные свойства</h2>
+							
+					<p>Пространство \(\mathbb{R}^{n}\) называется евклидовым <b>линейным пространством</b> с введенными операциями сложения и умножения. Элементы этого пространства называются числами или векторами и имеют вид \(\vec{x}=(x_{1},x_{2},\cdots,x_{n})\), где \(x_{i}\in\mathbb{R}\).</p>
 					
+					<p><b>Линейное пространство</b> - это множество векторов с введенными действиями сложения и умножения, обладающими восемью свойствами.</p>
+					
+					<p>Операция сложения двух векторов \(x=(x_{1},x_{2},\cdots,x_{n})\) и \(y=(y_{1},y_{2},\cdots,y_{n})\) определена таким образом, что их сумма равна \(x+y=(x_{1}+y_{1},x_{2}+y_{2},\cdots,x_{n}+y_{n})\).</p>
+					
+					<p>Операция множения, в отличии от сложения, определена для одного вектора \(x=(x_{1},x_{2},\cdots,x_{n})\) и произвольного вещественного числа \(\lambda\in\mathbb{R}\) таким образом, что \(\alpha x=(\alpha x_{1},\alpha x_{2},\cdots,\alpha x_{n})\)</p>
+					
+					<p>Данные операции обладают следующими свойствами:
+						<ol type="1" class="properties">
+							<li>\((\vec{x}+\vec{y})+\vec{z}=\vec{x}+(\vec{y}+\vec{z})\) (ассоциативность сложения);</li>
+							<li>\(\vec{x}+\vec{y}=\vec{y}+\vec{x}\) (коммутативность сложения);</li>
+							<li>\(\exists\vec{0}\Rightarrow\vec{x}+\vec{0}=\vec{x}\) (существование нейтрального элемента относительно сложения);</li>
+							<li>\(\forall\vec{x}\in\mathbb{R}^{n}\;\exists\widetilde{x}\in\mathbb{R}^{n}\Rightarrow\vec{x}+\widetilde{x}=\vec{0}\) (существование противоположного элемента);</li>
+							<li>\(\alpha(\beta\vec{x})=(\alpha\beta)\vec{x}\) (ассоциативность умножения на скаляр);</li>
+							<li>\(1\vec{x}=\vec{x}\) (унитарность);</li>
+							<li>\((\alpha+\beta)\vec{x}=\alpha\vec{x}+\beta\vec{x}\) (дистрибутивность умножения вектора на скаляр относительно сложения скаляров);</li>
+							<li>\(\alpha(\vec{x}+\vec{y})=\alpha\vec{x}+\alpha\vec{y}\) (дистрибутивность умножения вектора на скаляр относительно сложения векторов).</li>
+						</ol>
+					</p>
+						
+					<p><span class="def"></span>Линейно зависимым называется такое подмножество \(\{\vec{x},\vec{y},\cdots,\vec{z}\}\subset\mathbb{R}^{n}\), для элементов которого выполняется следующее условие: $$\exists(\alpha^{2}+\beta^{2}+\cdots+\gamma^{2})\neq0$$ $$\alpha\vec{x}+\beta\vec{y}\;+\;\cdots\;+\;\gamma\vec{z}=\vec{0}$$</p>
+					<p><span class="def"></span>\(\vec{x},\vec{y},\cdots,\vec{z}\) - линейно независимы, если $$\alpha\vec{x}+\beta\vec{y}\;+\;\cdots\;+\;\gamma\vec{z}=\vec{0}$$ $$\alpha=\beta=\;\cdots\;=\gamma=0$$</p>
+					<p><span class="def"></span><b>Размерностью</b> пространства \(\mathbb{R}^{n}\) называется максимальное число линейно независимых векторов и обозначается как \(dim\;\mathbb{R}^{n}\)</p>
+					<p><span class="def"></span><b>Базисом</b> евклидова пространства называется порядоченный набор из линейно независимых еденичных векторов</p>
+					<p><span class="def"></span>Функция вида \((\vec{x},\vec{y})\) ставит в соответствие число и называется <b>скалярным произведением</b> $$(\vec{x},\vec{y})=\sum_{k=1}^{n}x_{k}y_{k}$$</p>
+					<p><span class="def"></span><b>Нормой</b> называется фнкция вида \(\|\vec{x}\|\), которая равна длине вектора и считается следющим образом: $$\|\vec{x}\|=\sqrt{(\vec{x},\vec{x})}$$</p>
+					<p><span class="def"></span><b>Метрика (расстояние)</b> - это функция вида \(\rho(\vec{x},\vec{y})\) численно равная \(\|\vec{x}-\vec{y}\|\)</p>
+					<p>Скалярное произведение и норма связаны через <b>неравенство Коши-Буняковского</b>: $$|\vec{x},\vec{y}|\leqslant\|\vec{x}\|\times\|\vec{y}\|$$</p>
 				</article>
 			
 			</section>
 		
-		<section>
+		</section>
+		
+		<footer>
+		  <div class="container">
+			<div class="footer-col"><span>Mathass © 2016</span></div>
+			<div class="footer-col">
+			  <div class="social-bar-wrap">
+				<a title="Facebook" href="" target="_blank"><i class="fa fa-facebook"></i></a>
+				<a title="Twitter" href="" target="_blank"><i class="fa fa-twitter"></i></a>
+				<a title="Pinterest" href="" target="_blank"><i class="fa fa-pinterest"></i></a>
+				<a title="Instagram" href="" target="_blank"><i class="fa fa-instagram"></i></a>
+			  </div>
+			</div>
+			<div class="footer-col">
+			  <a href="mailto:petrolingus@gmail.com">Написать письмо</a>
+			</div>
+		  </div>
+		</footer>
+		
 	</body>
 </html>

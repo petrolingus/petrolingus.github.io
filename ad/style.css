@@ -22,6 +22,7 @@ a {
 body {
 	font-family: 'Open Sans', arial, sans-serif;
 	font-size: 16px;
+	text-align: justify;
 	line-height: 1.5;
 	color: #373737;
 	background-color: #FFFBF9;
@@ -50,15 +51,59 @@ header {
 
 
 /* Настройки основного контента */
-.question-title {
-	font-size: 24px;
-	padding-bottom: 1em;
+.quastion {
+	margin-bottom: 32px;
 }
 
 .quastion p {
 	font-size: 16px;
 	padding-bottom: 1em;
 }
+
+.question-title {
+	font-size: 24px;
+	padding-bottom: 1em;
+}
+
+.properties {	
+	padding-left:32px;
+}
+
+.def::before {
+	content: "Опр."
+}
+
+.def {
+	border-bottom: 2px solid #CDC8C6;
+	font-weight: 600;
+	margin-right: 8px;
+}
+
+/* Настройки футера*/
+footer {
+	padding: 30px 0;
+	height: 128px;
+	background: #3C3D41;
+	color: white;
+}
+.footer-col {
+width: 33.3333333333%;
+float: left;
+}
+.footer-col a {
+color: white;
+}
+.footer-col:last-child {
+text-align: right;
+}
+.social-bar-wrap {
+text-align: center;
+}
+.social-bar-wrap a {
+padding: 0 7px;
+font-size: 18px;
+}
+
 
 @media (max-width: 480px) {
 	
@@ -68,12 +113,10 @@ header {
 	
 	.question-title {
 		font-size: 20px;
-		padding-bottom: 1em;
 	}
 
 	.quastion p {
 		font-size: 12px;
-		padding-bottom: 1em;
 	}
 	
 }
