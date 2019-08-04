@@ -10,9 +10,16 @@ section {
 	
 	margin-left: auto;
     margin-right: auto;
-	width: 1024px;
+	padding: 8px;
+	width: 1008px;
 }
 
 i {
 	background-color:yellow;
+	/*background-color:yellow;
+	border-bottom: 1px solid steelblue;*/
+}
+
+#definition {
+	background-color: ;
 }
