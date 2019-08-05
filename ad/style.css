@@ -1,128 +1,245 @@
-@import url('https://fonts.googleapis.com/css?family=Rochester&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ribeye+Marrow&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
+
+/* font-family: 'Montserrat', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=cyrillic');
+
+@import url('https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap');
+
 
 
 /* Настройки общих параметров */
+
 *, *:after, *:before {
+	
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
-ul {
-	list-style: none;
-}
+
 a {
 	text-decoration: none;
 	outline: none;
 }
+
 body {
-	font-family: 'Open Sans', arial, sans-serif;
-	font-size: 16px;
-	text-align: justify;
-	line-height: 1.5;
-	color: #373737;
 	background-color: #FFFBF9;
 }
+
 .container {
 	margin: 0 auto;
+	padding: 0 1em;
 	width: 100%;
-	max-width: 960px;
-	padding: 0 16px;
+	max-width: 768px;
 } 
 
 
+
+
 /* Настройки шапки страницы */
+
 header {
+	margin-bottom: 1.95em;
 	width: 100%;
-	padding: 4px 0;
+	height: 48px;
+	border-bottom: 0.05em solid #E9B199;
 	background-color: #FF5810;
-	margin-bottom: 32px;
-	position: relative;
 }
+
+header > section {
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+	
 .logo {
-	font-size: 32px;
+	font-size: 2em;
 	color: white;
 	font-family: 'Ribeye Marrow', cursive;
 }
 
+.search {
+	padding: 0 16px;
+	width: 293px;
+	height: 32px;
+	border-radius: 16px;
+	border: 0;
+	outline: none;
+	color: #FF842C;
+	background-color: #D84E00;
+}
+
+.search::placeholder {
+	color: #FF842C;
+}
+
+.search:focus {
+	background-color: #FFFFFF;
+}
+
+.menu-button {
+	font-size: 1em;
+	color: white;
+}
+
+.form-profile {
+	width: 128px;
+	height: 48px;
+	-webkit-clip-path: circle(64px at 50% 50%);
+}
+
+.circle {
+	background-image: url("photo.png");
+	background-size: 128px;
+	background-position: 0 50%;
+}
+
+.profile {
+	background-color: rgba(255, 117, 17, 0.32);
+	border: 0;
+	outline: none;
+}
+
+.profile:focus {
+	border: 0;
+}
+
+
+
 
 /* Настройки основного контента */
-.quastion {
+
+article {
+	width: 100%;
+	max-width: 768px;
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
 	margin-bottom: 32px;
 }
 
-.quastion p {
-	font-size: 16px;
-	padding-bottom: 1em;
+p.title {
+	font-weight: 700;
+	font-size: 2em;
 }
 
-.question-title {
-	font-size: 24px;
-	padding-bottom: 1em;
-}
-
-.properties {	
-	font-size: 16px;
-	padding-left:32px;
-}
-
-.def::before {
-	content: "Опр."
-}
-
-.def {
-	border-bottom: 2px solid #CDC8C6;
+p.subtitle {
 	font-weight: 600;
-	margin-right: 8px;
+	font-size: 1.5em;
 }
+
+p.define {
+	padding: 16px;
+	border-left: 3px solid #FF5810;
+	background-color: #555555;
+	color: white;
+}
+
+ol.enum {
+	counter-reset: wslist1;/*сбрасываем счетчик списка*/
+	list-style: none;/*отменяем маркер по умолчанию*/
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1em;
+	line-height: 1.5em;
+	margin-bottom: 32px;
+}
+
+ol.enum > li {
+	margin: 0 0 1em 3em;
+	line-height: 16px;
+    position:relative;/*позиционирование внутри элемента */
+}
+
+ol.enum > li::before {
+		background: #555555;
+        border-radius: 50%;
+        content: counter(wslist1);/* вывод счетчика*/
+        counter-increment: wslist1;/*значение счетчика увеличиваем на один */
+        display: inline-block;
+        height: 16px;
+		width: 16px;
+        left: -40px;
+		font-size: 12px;
+        line-height: 16px;
+        position: absolute;/*абсолютное позиционирование*/
+		color: white;
+        text-align: center;
+        top: 0;
+}
+
+
+
+
+/* Настройки боковой панели */
+
+aside {
+	
+	padding-left: 32px;
+	width: 256px;
+	
+}
+
+section.navigation {
+	padding: 0 16px;
+	background-color: #F4EFEC;
+}
+
+ul.vmenu {
+	
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.8em;
+	font-weight: 600;
+	line-height: 1.5em;
+	list-style: none;
+
+}
+
+
+
 
 /* Настройки футера*/
+
 footer {
 	padding: 30px 0;
 	height: 128px;
 	background: #3C3D41;
 	color: white;
 }
-.footer-col {
-width: 33.3333333333%;
-float: left;
-}
-.footer-col a {
-color: white;
-}
-.footer-col:last-child {
-text-align: right;
-}
-.social-bar-wrap {
-text-align: center;
-}
-.social-bar-wrap a {
-padding: 0 7px;
-font-size: 18px;
+
+.line {
+	height: 2px;
+	background-color: #FF5810;
 }
 
+
+
+
+/* Адаптив */
+
+@media (max-width: 768px) {
+	
+	body {
+		
+		font-size: 14px;
+		
+	}
+	
+	.search {
+		display: none;
+	}
+	
+}
 
 @media (max-width: 480px) {
 	
-	.logo {
-		font-size: 30px;
+	.menu-button {
+		display: none;
 	}
 	
-	.question-title {
-		font-size: 22px;
-	}
-	
-	.properties {	
-		font-size: 14px;
-		padding-left:30px;
-	}
-
-	.quastion p {
-		font-size: 14px;
-	}
 	
 }
