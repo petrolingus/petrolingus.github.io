@@ -1,196 +1,80 @@
-@import url('https://fonts.googleapis.com/css?family=Rochester&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+
+
+
+
+/* font-family: 'Montserrat', sans-serif; */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=cyrillic');
+
+
+
+
+/* Общие настройки */
+
+*, *:after, *:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
 body {
-	margin: 0px;
-	background-color: #FFFDFB;
+	background-color: #FFFBF9;
 }
 
-header {
-	height: 44px;
-	background-color: #FF802C;
+p {
+	margin-bottom: 1.5em;
+	line-height: 1.5em;
+	font-size: 1em;
+	font-family: 'Montserrat', sans-serif;
 }
 
-h2 {
-	border-top: 24px;
+h1 {
+	margin-bottom: 1.5em;
+	line-height: 1.5em;
+	font-size: 2em;
+	font-weight: 700;
+	font-family: 'Montserrat', sans-serif;
 }
 
-ul {
-	margin: 0;
-	padding-left: 0;
-	list-style: none;
+
+
+
+/* Описание стиля хеадера */
+
+header.page-header {
+	margin: 0 0 32px 0;
+	width: 100%;
+	height: 48px;
+	background-color: #FF5810;
 }
 
-a {
-	text-decoration: none;
+
+
+
+/* Описание главной области контента */
+
+section.page-content {
+	margin: 0 auto;
+	padding: 0 1em;
+	width: 100%;
+	max-width: 768px;
 }
 
-#header_section {
-	margin-left: auto;
-    margin-right: auto;
-	width: 1024px;
-	height: 44px;
+
+
+
+/* Адаптив */
+
+@media (max-width: 480px) {
 	
-	display: -webkit-flex;
-	display: flex;
-	align-content: center;
-}
-
-/*
-.search_input {
-	margin-top: auto;
-	margin-bottom: auto;
-	outline:none;
-	background-color: #CC5404;
-}
-
-#search_input_1 {
-	width: 36px;
-	height: 32px;
-	border: 0px solid #000000;
-	border-radius: 18px 0px 0px 18px;
-	background-image: url("icons/search.png");
-	background-size: 16px 16px;
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-}
-
-#search_input_1::-webkit-input-placeholder {
-	background-image: url("icons/search.png");
-	background-size: 16px 16px;
-	background-repeat: no-repeat;
-}
-
-#search_input_2 {
-	width: 277px;
-	height: 32px;
-	border: 0px solid #000000;
-	border-radius: 0px 18px 18px 0px;
-}
-
-#search_input_2::-webkit-input-placeholder {
-	color: #FF9854;
-}
-
-#search_input_1:focus, #search_input_2:focus {
-	background-color: white;
-}
-
-#search_input {
-	margin-top: auto;
-	margin-bottom: auto;
-	margin-right: 32px;
-	width: 36px;
-	height: 32px;
-}
-
-#search_input {
-	margin-top: auto;
-	margin-bottom: auto;
-	margin-right: 32px;
-	width: 313px;
-	height: 32px;
-	border: 0px solid #000000;
-	border-radius: 18px;
-	outline:none;
-	background-color: #CC5404;
-	color: white;
-}
-
-#search_input:focus {
-	text-align: left;
-	background-color: #ffffff;
-	color: black;
-}
-*/
-
-.header_menu {
-	font-size: 14pt;
-	line-height: 44px;
-	color: white;
-	font-family: 'Open Sans', sans-serif;
-}
-
-#logo {
-	margin: 0px;
-	width: 256px;
-	font-size: 24pt;
-	color: white;
-	font-family: 'Ribeye Marrow', cursive;
-}
-
-#header_section > ul {
-	display: -webkit-flex;
-	display: flex; 
-	flex-wrap: row;
-}
-
-#header_section > ul > li {
-	margin-right: 32px;
-}
-
-#main_contnt {
-	margin-left: auto;
-    margin-right: auto;
-	width: 1024px;
-	display: -webkit-flex;
-	display: flex;
-}
-
-#main_contnt > aside {
-	width: 256px;
-	text-align: right;
-}
-
-
-#main_contnt > article {
-	width: 768px;
-	line-height: 1.5;
-	font-family: Times New Roman;
-	font-size: 14pt;
-}
-
-.block::before {
-	content: "Навигация";
-}
-
-.block {
-	margin: 16px;
-	padding-left: 24px;
-	padding-right: 24px;
-	background-color: #F4F0EB;
+	body {
+		font-size: 12px;
+	}
 	
-	color: #4E4E4E;
+	section.page-content {
+		margin: 0;
+		padding: 0 1em;
+		width: 100%;
+		background-color: #FFF;
+	}
 	
-	text-align: left;
-	font-size: 14px;
-	line-height: 42px;
-	font-family: 'Fira Sans',sans-serif;
-	font-weight: 600;
 }
-
-.block > ul > li {
-	border-top: 1px solid #E1D5C7;
-}
-
-.icon {
-	color: #589FD1;
-}
-
-/*
-.icon {
-	background:url(https://laravel.ru/favicon.ico) no-repeat left center; 
-    background-size: 16px; 
-    display:inline-block;
-    vertical-align:bottom;
-    padding-left: 25px;
-	
-	color: #C14D00;
-	line-height: 36px;
-	font-family: 'Open Sans', sans-serif;
-}
-*/
