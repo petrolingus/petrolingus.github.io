@@ -1,0 +1,40 @@
+body {
+	background-color: #f1f1f1;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid #f1f1f1;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+td, th {
+  border: 1px solid #f1f1f1;
+  padding: 10px 20px;
+}
+
+th {
+  background-color: #4F81BE;
+  color: white;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-child(even) td {
+  background-color: #D1D8EA;
+}
+
+tr:nth-child(odd) td {
+  background-color: #E9EEF4;
+}
+
+caption {
+  padding: 10px;
+}
+
+.works_content {
+	padding: 10px;
+}
