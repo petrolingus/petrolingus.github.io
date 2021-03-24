@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Alexandr Lebedev</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 		<link href="styles/works_menu.css" rel="stylesheet">
 		<link href="styles/body.css" rel="stylesheet">
 		<link href="styles/works.css" rel="stylesheet">
@@ -27,50 +28,381 @@
         </header>
 		<section class="works_content">
 		
+			<h1>SQL JOIN на пальцах</h1>
 			
-			Таблица пользователей:
-			<table>
-				<th>#</th>
-				<th>Фамилия</th>
-				<th>Имя</th>
-				<th>Отчество</th>
-				<th>Возраст</th>
-				<tr>
-					<td>1</td>
-					<td>Лебедев</td>
-					<td>Александр</td>
-					<td>Александрович</td>
-					<td>22</td>
-				</tr>
-				<tr>
-					<td>2</td>
-					<td>Сычёва</td>
-					<td>Мария</td>
-					<td>Александровна</td>
-					<td>18</td>
-				</tr>
-				<tr>
-					<td>3</td>
-					<td>Михалков</td>
-					<td>Никита</td>
-					<td>Сергеевич</td>
-					<td>20</td>
-				</tr>
-				<tr>
-					<td>4</td>
-					<td>Мерзляков</td>
-					<td>Иван</td>
-					<td>Юрьевич</td>
-					<td>21</td>
-				</tr>
-				<tr>
-					<td>5</td>
-					<td>Ташкова</td>
-					<td>Дарья</td>
-					<td>Владимировна</td>
-					<td>18</td>
-				</tr>
-			</table>
+			<p>Присоединение таблиц в запросах — это базовый инструмент в работе с базами данных. Давайте рассмотрим какие присоединения <i>(JOIN)</i> бывают, и что от этого меняется в результатах запроса.</p>
+
+			<p>Для начала создадим две таблицы, над которыми будем проводить опыты. Это таблица с именами сотрудников <span class="span-table">tblEmployee</span> и словарь с перечнем должностей <span class="span-table">tblPosition</span>.</p>
+			
+			<div class="hbox">
+				<table>
+					<caption>tblEmployee</caption>
+					<th>#</th>
+					<th>id</th>
+					<th>last_name</th>
+					<th>fist_name</th>
+					<th>middle_name</th>
+					<th>position_id</th>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>Лебедев</td>
+						<td>Александр</td>
+						<td>Александрович</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>2</td>
+						<td>Сычёва</td>
+						<td>Мария</td>
+						<td>Александровна</td>
+						<td>1</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>3</td>
+						<td>Михалков</td>
+						<td>Никита</td>
+						<td>Сергеевич</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>4</td>
+						<td>Мерзляков</td>
+						<td>Иван</td>
+						<td>Юрьевич</td>
+						<td>2</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>5</td>
+						<td>Ташкова</td>
+						<td>Дарья</td>
+						<td>Владимировна</td>
+						<td>1</td>
+					</tr>
+				</table>
+				<table>
+					<caption>tblPosition</caption>
+					<th>#</th>
+					<th>id</th>
+					<th>name</th>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>Дизайнер</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>2</td>
+						<td>Редактор</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>3</td>
+						<td>Программист</td>
+					</tr>
+				</table>
+			</div>
+		
+			<p>Как вы можете заметить, имена сотрудников и их должности находятся в разных таблицах. И если нам потребуется таблица, которая будет сожержать имена сотрудников и их соответствующие должности, то нам понадобится как-то соединить две таблцы.</p>
+			
+			<p>Как можно соединить таблицы? Этот вопрос достаточно филосовский, однако попробуем соединить их так, чтобы энтропия была максимальной. Это можно сделать простым перебором каждой строки из первой таблицы с каждой строкой второй.</p>
+			
+			<div class="hbox">
+				<table>
+					<caption>tblEmployee & tblPosition</caption>
+					<th>#</th>
+					<th>id</th>
+					<th>last_name</th>
+					<th>fist_name</th>
+					<th>middle_name</th>
+					<th>position_id</th>
+					<th>id</th>
+					<th>name</th>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>Лебедев</td>
+						<td>Александр</td>
+						<td>Александрович</td>
+						<td>3</td>
+						<td>1</td>
+						<td>Дизайнер</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>1</td>
+						<td>Лебедев</td>
+						<td>Александр</td>
+						<td>Александрович</td>
+						<td>3</td>
+						<td>2</td>
+						<td>Редактор</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>1</td>
+						<td>Лебедев</td>
+						<td>Александр</td>
+						<td>Александрович</td>
+						<td>3</td>
+						<td>3</td>
+						<td>Программист</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>2</td>
+						<td>Сычёва</td>
+						<td>Мария</td>
+						<td>Александровна</td>
+						<td>1</td>
+						<td>1</td>
+						<td>Дизайнер</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>2</td>
+						<td>Сычёва</td>
+						<td>Мария</td>
+						<td>Александровна</td>
+						<td>1</td>
+						<td>2</td>
+						<td>Редактор</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>2</td>
+						<td>Сычёва</td>
+						<td>Мария</td>
+						<td>Александровна</td>
+						<td>1</td>
+						<td>3</td>
+						<td>Программист</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>3</td>
+						<td>Михалков</td>
+						<td>Никита</td>
+						<td>Сергеевич</td>
+						<td>3</td>
+						<td>1</td>
+						<td>Дизайнер</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>3</td>
+						<td>Михалков</td>
+						<td>Никита</td>
+						<td>Сергеевич</td>
+						<td>3</td>
+						<td>2</td>
+						<td>Редактор</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>3</td>
+						<td>Михалков</td>
+						<td>Никита</td>
+						<td>Сергеевич</td>
+						<td>3</td>
+						<td>3</td>
+						<td>Программист</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>4</td>
+						<td>Мерзляков</td>
+						<td>Иван</td>
+						<td>Юрьевич</td>
+						<td>2</td>
+						<td>1</td>
+						<td>Дизайнер</td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>4</td>
+						<td>Мерзляков</td>
+						<td>Иван</td>
+						<td>Юрьевич</td>
+						<td>2</td>
+						<td>2</td>
+						<td>Редактор</td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td>4</td>
+						<td>Мерзляков</td>
+						<td>Иван</td>
+						<td>Юрьевич</td>
+						<td>2</td>
+						<td>3</td>
+						<td>Программист</td>
+					</tr>
+					<tr>
+						<td>13</td>
+						<td>5</td>
+						<td>Ташкова</td>
+						<td>Дарья</td>
+						<td>Владимировна</td>
+						<td>1</td>
+						<td>1</td>
+						<td>Дизайнер</td>
+					</tr>
+					<tr>
+						<td>14</td>
+						<td>5</td>
+						<td>Ташкова</td>
+						<td>Дарья</td>
+						<td>Владимировна</td>
+						<td>1</td>
+						<td>2</td>
+						<td>Редактор</td>
+					</tr>
+					<tr>
+						<td>15</td>
+						<td>5</td>
+						<td>Ташкова</td>
+						<td>Дарья</td>
+						<td>Владимировна</td>
+						<td>1</td>
+						<td>3</td>
+						<td>Программист</td>
+					</tr>
+				</table>
+			</div>
+			
+			<p>Получившаяся таблица очень большая (у меня ручки устали заполнять это), однако, это можно исправить, если внимательно присмотреться к колонкам <span class="span-table">position_id</span> и <span class="span-table">id  (правый)</span>. Очевидно, что записи (строки) в которых эти два значения не совпадают не имеют смысла, поэтому нужно отфильтровать данную таблицу.</p>
+			
+			<p>Всем этим занимается сперциальый оператор SQL, который называется JOIN. Код ниже демонстрирует запрос, который обьединит таблицы с учетом нашего 'фильтра'.</p>
+			
+			<img src="img\code\sql_1.svg" alt="Пример JOIN запроса в SQL" class="code-block"/>
+			
+			<p>Такой запрос вернет следующую таблицу</p>
+			
+			<div class="hbox">
+				<table>
+					<caption>tblEmployee & tblPosition</caption>
+					<th>#</th>
+					<th>id</th>
+					<th>last_name</th>
+					<th>fist_name</th>
+					<th>middle_name</th>
+					<th>position_id</th>
+					<th>id</th>
+					<th>name</th>
+					<tr>
+						<td>1</td>
+						<td>1</td>
+						<td>Лебедев</td>
+						<td>Александр</td>
+						<td>Александрович</td>
+						<td>3</td>
+						<td>3</td>
+						<td>Программист</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>2</td>
+						<td>Сычёва</td>
+						<td>Мария</td>
+						<td>Александровна</td>
+						<td>1</td>
+						<td>1</td>
+						<td>Дизайнер</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>3</td>
+						<td>Михалков</td>
+						<td>Никита</td>
+						<td>Сергеевич</td>
+						<td>3</td>
+						<td>3</td>
+						<td>Программист</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>4</td>
+						<td>Мерзляков</td>
+						<td>Иван</td>
+						<td>Юрьевич</td>
+						<td>2</td>
+						<td>2</td>
+						<td>Редактор</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>5</td>
+						<td>Ташкова</td>
+						<td>Дарья</td>
+						<td>Владимировна</td>
+						<td>1</td>
+						<td>1</td>
+						<td>Дизайнер</td>
+					</tr>
+				</table>
+			</div>
+			
+			<p>Как видно, каждому сотруднику соответстует его действительная должность.</p>
+				
+			<p>Для того, чтобы таблица была более приятной для чтения, можно убрать ненужные колонки. Это делается путем замены символа <span class="span-table">*</span> на последовательность атрибутов.</p>		
+
+			<img src="img\code\sql_2.svg" alt="Пример JOIN запроса в SQL" class="code-block"/>	
+
+			<p>При выполнение такого запроса, вернется такая таблица, у которой колонки будут стоять в таком же порядке, что и заданные атрибутаы.</p>			
+					
+			<div class="hbox">
+				<table>
+					<caption>tblEmployee & tblPosition</caption>
+					<th>#</th>
+					<th>last_name</th>
+					<th>fist_name</th>
+					<th>middle_name</th>
+					<th>name</th>
+					<tr>
+						<td>1</td>
+						<td>Лебедев</td>
+						<td>Александр</td>
+						<td>Александрович</td>
+						<td>Программист</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Сычёва</td>
+						<td>Мария</td>
+						<td>Александровна</td>
+						<td>Дизайнер</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Михалков</td>
+						<td>Никита</td>
+						<td>Сергеевич</td>
+						<td>Программист</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Мерзляков</td>
+						<td>Иван</td>
+						<td>Юрьевич</td>
+						<td>Редактор</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Ташкова</td>
+						<td>Дарья</td>
+						<td>Владимировна</td>
+						<td>Дизайнер</td>
+					</tr>
+				</table>
+			</div>
+			
+			<p>JOIN или как его еще называют <span class="span-table">Декартово Произведение</span> является не единственным способом обьединения таблиц. Например LEFT JOIN, RIGHT JOIN и т.п. О них поговорим в других статьях :)</p>		
+			
 		</section>	
 	</body>
 </html>

@@ -1,40 +1,76 @@
 body {
 	background-color: #f1f1f1;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	text-align: justify;
+	line-height: 1.56;
 }
 
 table {
-  border-collapse: collapse;
-  border: 2px solid #f1f1f1;
-  letter-spacing: 1px;
-  font-size: 1rem;
+	border-collapse: collapse;
+	border: 2px solid #f1f1f1;
+	letter-spacing: 1px;
+	font-size: 12px;
 }
 
 td, th {
-  border: 1px solid #f1f1f1;
-  padding: 10px 20px;
+	border: 1px solid #f1f1f1;
+	padding: 10px 20px;
 }
 
 th {
-  background-color: #4F81BE;
-  color: white;
+	text-align: center;
+	background-color: #4F81BE;
+	color: white;
 }
 
 td {
-  text-align: center;
+	text-align: center;
 }
 
 tr:nth-child(even) td {
-  background-color: #D1D8EA;
+	background-color: #D1D8EA;
 }
 
 tr:nth-child(odd) td {
-  background-color: #E9EEF4;
+	background-color: #E9EEF4;
 }
 
 caption {
-  padding: 10px;
+	padding: 10px;
 }
 
 .works_content {
+	width: 60%;
+	margin: auto;
 	padding: 10px;
+}
+
+.hbox {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.foo {
+	width: 50%;
+	spacing: 20px;
+}
+
+.span-table {
+    padding: .1rem .3rem .2rem;
+    border-radius: .2rem;
+    background: #add8e6;
+}
+
+ .exam_04 {
+    background-color: #feeff4;
+    border-left: 6px solid #e04386;
+    color: #49152c;
+    padding: 30px 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+
+.code-block {
+	width: 100%;
 }
