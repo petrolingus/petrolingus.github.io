@@ -14,6 +14,23 @@ body {
 	overflow-x: hidden;
 }
 
+input,
+select,
+button {
+	border: none;
+	background: transparent;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
 
 /* Header Style */
 .container > header {
@@ -42,10 +59,49 @@ section {
   font-size: 4em;
   line-height: 1.5;
   text-align:center;
-  padding:20px;
+  padding: 0px;
 }
 
 .container > section > span {
   color: #b14943;
   border-bottom: 1px dashed #b14943;
+}
+
+button {
+  line-height: 3;
+	text-transform: uppercase;
+	cursor: pointer;
+	position: relative;
+	background: #76C3BD;
+	color: #fff;
+	padding: 0 1em 0 0;
+	font-size: 40%;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+button::before {
+  content: "\e001";
+	color: #fff;
+	float: left;
+	padding: 0 0.7em;
+	margin: 0 0.8em 0 0;
+	background: #69B1A9;
+}
+
+/* .input {
+  border: none;
+  background-color: blue;
+} */
+
+/* .input:active {
+  background-color: white;
+}
+
+.input:scope {
+  background-color: yellow;
+} */
+
+.input:focus {
+  outline: none;
 }
