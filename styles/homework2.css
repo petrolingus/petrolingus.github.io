@@ -28,7 +28,7 @@ body {
 }
 
 .vertical-container {
-  width: 600px;
+  width: 80%;
   height: 100%;
   margin: auto;
 }
@@ -63,7 +63,8 @@ body {
 .history-container {
   width: 300px;
   height: 576px;
-  background-color: #383838;
+  /* background-color: #383838; */
+  background-color: transparent;
 }
 
 .history-container-header {
@@ -134,4 +135,39 @@ button {
   font-weight: 700;
   font-size: 1rem;
   color: white;
+}
+
+table {
+  width: 100%;
+	border-collapse: collapse;
+	border: 2px solid #f1f1f1;
+	letter-spacing: 1px;
+	font-size: 12px;
+}
+
+td, th {
+	border: 1px solid #f1f1f1;
+	padding: 10px 20px;
+}
+
+th {
+	text-align: center;
+	background-color: #4F81BE;
+	color: white;
+}
+
+td {
+	text-align: center;
+}
+
+tr:nth-child(even) td {
+	background-color: #D1D8EA;
+}
+
+tr:nth-child(odd) td {
+	background-color: #E9EEF4;
+}
+
+caption {
+	padding: 10px;
 }
