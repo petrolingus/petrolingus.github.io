@@ -68,15 +68,20 @@ button {
 }
 
 /* Main Section Style */
-form {
+.container > section {
   font-size: 4em;
   line-height: 1.5;
   text-align:center;
   padding: 0px;
 }
 
-.container > form > span {
+.container > section > span {
   color: #b14943;
+  border-bottom: 1px dashed #b14943;
+}
+
+.container > section > span:hover {
+  color: red;
   border-bottom: 1px dashed #b14943;
 }
 
