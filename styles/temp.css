@@ -38,7 +38,8 @@ button {
 }
 
 .container {
-  width: 60%;
+  margin: auto;
+  width: 30%;
   font-size: 1em;
   display: flex;
   flex-direction: column;
@@ -86,7 +87,9 @@ button {
 }
 
 .hbox {
-  width: 40%;
+  padding: 8px;
+  height: 200px;
+  width: 500px;
   font-size: 1em;
   line-height: 1.5;
   text-align: center;
@@ -96,20 +99,19 @@ button {
 
 /* Table Style */
 table {
-  height: 100%;
 	color: #ffe8e7;
 	border-collapse: collapse;
 	letter-spacing: 1px;
-	font-size: 1.5em;
+	font-size: 1.0em;
   background-color: #ad5751;
 }
 
 thead {
-  padding-left: 10px:
+  width: 300px;
+  padding-left: 10px;
 }
 
 tbody {
-  height:90%;
   overflow-y: scroll;
 }
 
@@ -117,19 +119,26 @@ thead > tr, tbody {
   display:block;
 }
 
-td, th {
-  width: 128px;
-	padding: 10px 20px;
+tr {
+  /* width: 100%; */
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center; */
 }
 
+/* td, th {
+  width: 64px;
+	padding: 10px 20px;
+} */
+
 th {
-	text-align: center;
+	/* text-align: center; */
 	background-color: #ad5751;
 	color: white;
 }
 
 td {
-	text-align: center;
+	/* text-align: center; */
 }
 
 tr:nth-child(even) td {
