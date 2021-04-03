@@ -2,25 +2,43 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="css/master.css">
+    <title>Quadratic Equation Solver</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/form.css">
   </head>
   <body>
     <section class="main-content">
-
+      <section class="form">
+        <header>
+          <h1>Quadratic Equation Solver<span>powered by JavaScript</span></h1>
+        </header>
+        <section>
+          <span class="sign"></span>
+          <span class="input" role="textbox" contenteditable id="editor1">2</span>x<sup>2</sup>
+          <span class="sign">&#43;</span>
+          <span class="input" role="textbox" contenteditable id="editor2">17</span>x
+          <span class="sign">&#43;</span>
+          <span class="input" role="textbox" contenteditable id="editor3">1</span> = 0
+        </section>
+        <section class="nl-submit-wrap">
+          <button class="fas fa-calculator nl-submit" onclick="calculate()">Calculate</button>
+        </section>
+      </section>
     </section>
     <section class="table-content">
-      <table id="history-table">
-        <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
-        </tr>
+      <table id="history-table" >
+        <thead>
+          <tr>
+            <th id="number-attribute">#</th>
+            <th>Уравнения</th>
+            <th colspan='2'>Корни</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
       </table>
     </section>
-    <script type="text/javascript">
-      let table = document.getElementById('history-table');
-      table.getElementsByTagName('tagName')
-    </script>
+    <script src="https://kit.fontawesome.com/0d4a1d5d62.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
