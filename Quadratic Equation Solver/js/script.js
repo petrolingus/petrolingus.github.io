@@ -39,12 +39,16 @@ function findRoot(i, a, b, c) {
   let x2 = (-b - Math.sqrt(d)) / (2 * a);
   let newRow = document.createElement("tr");
 
-  let pa = a.toPrecision(4);
-  let pb = b.toPrecision(4);
-  let pc = c.toPrecision(4);
+  let sign1 = (a < 0) ?  '&#8722; ' : '';
+  let sign2 = (b < 0) ? ' &#8722; ' : ' &#43; ';
+  let sign3 = (c < 0) ? ' &#8722; ' : ' &#43; ';
+
+  let pa = Math.abs(a.toPrecision(4));
+  let pb = Math.abs(b.toPrecision(4));
+  let pc = Math.abs(c.toPrecision(4));
 
   newRow.innerHTML = "<td>" + (i + 1) + "</td>" +
-    "<td>" + pa + 'x<sup>2</sup> + ' + pb + 'x + ' + pc + "</td>";
+    "<td>" + sign1 + pa + 'x<sup>2</sup>' + sign2 + pb + 'x' + sign3 + pc + "</td>";
 
   if (isNaN(x1) || x1 == x2) {
     let value = x1 == x2 ? x1 : 'Нет корней';
